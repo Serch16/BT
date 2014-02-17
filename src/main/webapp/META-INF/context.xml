@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiJARLocking="true" cacheMaxSize="0" cacheTTL="1" cachingAllowed="false" path="/BolsaEmpleo">
+  <Resource auth="Container" driverClassName="com.mysql.jdbc.Driver" maxActive="50" maxIdle="100" maxWait="90000" name="jdbc/bolsaausiasmarch" password="bitnami" type="javax.sql.DataSource" url="jdbc:mysql://localhost:3306/bolsaausiasmarch" username="root" validationQuery="SELECT 1 FROM DUAL"/>
+</Context>

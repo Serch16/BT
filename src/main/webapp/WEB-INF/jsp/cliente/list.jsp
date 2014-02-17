@@ -1,7 +1,7 @@
 <%-- 
     Document   : list.jsp
-    Created on : Jan 16, 2013, 12:57:09 PM
-    Author     : rafa
+    Created on : Feb 17, 2014, 14:03:09 PM
+    Author     : Sergio Martín Tárraga
 --%>
 <%@page import="net.rafaelaznar.helper.Conexion"%>
 <%@page import="net.rafaelaznar.dao.ClienteDao"%>

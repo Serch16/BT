@@ -1,6 +1,6 @@
 <div class="row-fluid">
     <div class="span7">       
-        <h2>Clientes</h2>
+        <h2>Alumnos</h2>
         <div id="order"></div>
         <div id="filter"></div>  
         <div id="registers">Mostrando {{clientes.length}} registros ({{nrpp}} por página)</div>
@@ -49,7 +49,7 @@
             </form> 
             -->
         </div> 
-        <button class="btn" id="crear">Crear Cliente</button>
+        <button class="btn" id="crear">Crear Alumno</button>
     </div>
 </div>
 <br>

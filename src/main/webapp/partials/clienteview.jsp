@@ -11,11 +11,11 @@
                 </tr>
             </thead>
             <tbody>
-                <tr><td>id</td><td>{{objeto.id}}</td></tr>
-                <tr><td>nombre</td><td>{{objeto.nombre}}</td>
-                <tr><td>primer apellido</td><td>{{objeto.ape1}}</td>
-                <tr><td>segundo apellido</td><td>{{objeto.ape2}}</td>
-                <tr><td>email</td><td>{{objeto.email}}</td>                
+                <tr><td>Id</td><td>{{objeto.id}}</td></tr>
+                <tr><td>Nombre</td><td>{{objeto.nombre}}</td>
+                <tr><td>Primer apellido</td><td>{{objeto.ape1}}</td>
+                <tr><td>Segundo apellido</td><td>{{objeto.ape2}}</td>
+                <tr><td>Email</td><td>{{objeto.email}}</td>                
             </tbody>
         </table>  
         <div class="text-right" > 

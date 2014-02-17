@@ -50,6 +50,7 @@
                         <div class="container">
                             <ul class="nav">
                                 <li class="active"><a href="#"><span><i class="icon-home"></i></span> Inicio</a></li>
+                                <li><a href="#cliente/list/1/10">Ofertas de trabajo (enlazado)</a></li>
                                 <li><a href="#">Ofertas de trabajo</a></li>
                                 <li><a href="#">Empleo público</a></li>
                             </ul>
@@ -64,10 +65,6 @@
 
                 <div class="span12">  
                     <ul class="menu">
-                        <li><a href="#cliente/list/1/10">clientes</a></li>
-                        <li><a href="#producto/list/1/10">productos</a></li>
-                        <li><a href="#tipoproducto/list/1/10">tipos de producto</a></li>
-                        <li><a href="#view2">view2</a></li>
                     </ul> 
                 </div>
             </div>

@@ -21,17 +21,12 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="<%=request.getContextPath()%>/css/bootstrap.min.css">
-        <style>
-            body {
-                padding-top: 60px;
-                padding-bottom: 40px;
-            }
-        </style>
         <link rel="stylesheet" href="<%=request.getContextPath()%>/css/bootstrap-responsive.min.css">
         <link rel="stylesheet" href="<%=request.getContextPath()%>/css/main.css">
+        <link rel="stylesheet" href="<%=request.getContextPath()%>/css/bolsadesktop.css">
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-       <script>window.jQuery || document.write('<script src="<%=request.getContextPath()%>/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-      
+        <script>window.jQuery || document.write('<script src="<%=request.getContextPath()%>/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+
         <script src="<%=request.getContextPath()%>/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 
 
@@ -42,9 +37,31 @@
     </head>    
 
     <body>
+
+        <div class="container">
+            <div class="masthead">
+                <div class="row">
+                    <div class="muted span4"><img id="logoinstituto" src="img/logo.png"></div>
+                    <div class="span4 cabeinfo"><span>X <strong>PUESTOS VACANTES</strong> de X</span></div>
+                    <div class="span4 cabeinfo"><button>Soy una (empresa)</button></div>
+                </div>
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="container">
+                            <ul class="nav">
+                                <li class="active"><a href="#"><span><i class="icon-home"></i></span> Inicio</a></li>
+                                <li><a href="#">Ofertas de trabajo</a></li>
+                                <li><a href="#">Empleo público</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- /.navbar -->
+            </div>
+        </div>
+
         <div class="container-fluid">
             <div class="row-fluid">
-                
+
                 <div class="span12">  
                     <ul class="menu">
                         <li><a href="#cliente/list/1/10">clientes</a></li>
@@ -75,11 +92,11 @@
         <script src="lib/angular/angular-sanitize.min.js"></script>
         <script src="js/app.js"></script>
         <script src="js/services.js"></script>
-        
+
         <script src="js/clienteControllers.js"></script>
         <script src="js/productoControllers.js"></script>
         <script src="js/tipoproductoControllers.js"></script>
-        
+
         <script src="js/filters.js"></script>
         <script src="js/directives.js"></script>
         <script src="<%=request.getContextPath()%>/js/vendor/bootstrap.min.js"></script>

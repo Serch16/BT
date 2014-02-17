@@ -1,0 +1,15 @@
+/* 
+    Document   : bolsadesktop
+    Created on : 14-feb-2014, 11:32:46
+    Author     : Sergio Martín Tárraga
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+#logoinstituto {
+    width: 160px;
+}
+.cabeinfo {
+    margin-top: 36px;
+    text-align: right;
+}

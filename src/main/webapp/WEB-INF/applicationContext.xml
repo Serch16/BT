@@ -19,6 +19,7 @@
         <bean class="net.rafaelaznar.dao.CompraDao" />
         <bean class="net.rafaelaznar.dao.ProductoDao" />
         <bean class="net.rafaelaznar.dao.TipoproductoDao" />
+        <bean class="net.rafaelaznar.dao.OfertaDao" />
     
     
     <!--bean id="propertyConfigurer"

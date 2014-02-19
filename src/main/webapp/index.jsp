@@ -17,7 +17,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Ajax Stock uniDAO Spring</title>
+        <title>Bolsa de trabajo CIPFP Ausias March</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="<%=request.getContextPath()%>/css/bootstrap.min.css">
@@ -42,16 +42,16 @@
             <div class="masthead">
                 <div class="row">
                     <div class="muted span4"><img id="logoinstituto" src="img/logo.png"></div>
-                    <div class="span4 cabeinfo"><span>X <strong>PUESTOS VACANTES</strong> de X</span></div>
+                    <div class="span4 cabeinfo"><span>{{ofertas.length}} <strong>PUESTOS VACANTES</strong> de {{empresas.length}} <strong>empresas</strong></span></div>
                     <div class="span4 cabeinfo"><button>Soy una (empresa)</button></div>
                 </div>
                 <div class="navbar">
                     <div class="navbar-inner">
                         <div class="container">
                             <ul class="nav">
-                                <li class="active"><a href="#"><span><i class="icon-home"></i></span> Inicio</a></li>
-                                <li><a href="#">Ofertas de trabajo</a></li>
-                                <li><a href="#">Empleo público</a></li>
+                                <li class="active"><a href="#oferta/list/1/10"><span><i class="icon-home"></i></span> Inicio</a></li>
+                                <li><a href="#producto/list/1/10">Ofertas de trabajo</a></li>
+                                <li><a href="#tipoproducto/list/1/10">Empleo público</a></li>
                             </ul>
                         </div>
                     </div>
@@ -61,15 +61,6 @@
 
         <div class="container-fluid">
             <div class="row-fluid">
-
-                <div class="span12">  
-                    <ul class="menu">
-                        <li><a href="#cliente/list/1/10">clientes</a></li>
-                        <li><a href="#producto/list/1/10">productos</a></li>
-                        <li><a href="#tipoproducto/list/1/10">tipos de producto</a></li>
-                        <li><a href="#view2">view2</a></li>
-                    </ul> 
-                </div>
             </div>
             <div class="row-fluid">
                 <div class="span12">
@@ -96,6 +87,7 @@
         <script src="js/clienteControllers.js"></script>
         <script src="js/productoControllers.js"></script>
         <script src="js/tipoproductoControllers.js"></script>
+        <script src="js/ofertaControllers.js"></script>
 
         <script src="js/filters.js"></script>
         <script src="js/directives.js"></script>
@@ -121,6 +113,7 @@
         <script src="<%=request.getContextPath()%>/js/control/producto.js" charset="UTF-8"></script>
         <script src="<%=request.getContextPath()%>/js/control/tipoproducto.js" charset="UTF-8"></script>
         <script src="<%=request.getContextPath()%>/js/control/compra.js" charset="UTF-8"></script>
+        <script src="<%=request.getContextPath()%>/js/control/oferta.js" charset="UTF-8"></script>
 
     </body>
 </html>

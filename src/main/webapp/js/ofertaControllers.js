@@ -35,7 +35,11 @@ moduloOferta.controller('controlOfertaList', function($scope, $routeParams, serv
         datos4['data'].push('acciones');
         $scope.prettyFieldNames = datos4['data'];
     });
-
+    
+     $scope.numOfertas = serverService.getRegisters($scope.clase).then(function(datos4) {
+        $scope.numOfertas = datos4['data'];
+    });
+    
     $scope.ofertas = serverService.getPage($scope.clase, $scope.numPagina, null, null, $scope.nrpp, null, null, null, null, null, null).then(function(datos3) {
         $scope.ofertas = datos3['list'];
 

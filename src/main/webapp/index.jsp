@@ -38,26 +38,7 @@
 
     <body>
 
-        <div class="container">
-            <div class="masthead">
-                <div class="row">
-                    <div class="muted span4"><img id="logoinstituto" src="img/logo.png"></div>
-                    <div class="span4 cabeinfo"><span>{{ofertas.length}} <strong>PUESTOS VACANTES</strong> de {{empresas.length}} <strong>empresas</strong></span></div>
-                    <div class="span4 cabeinfo"><button>Soy una (empresa)</button></div>
-                </div>
-                <div class="navbar">
-                    <div class="navbar-inner">
-                        <div class="container">
-                            <ul class="nav">
-                                <li class="active"><a href="#oferta/list/1/10"><span><i class="icon-home"></i></span> Inicio</a></li>
-                                <li><a href="#producto/list/1/10">Ofertas de trabajo</a></li>
-                                <li><a href="#tipoproducto/list/1/10">Empleo público</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div><!-- /.navbar -->
-            </div>
-        </div>
+        
 
         <div class="container-fluid">
             <div class="row-fluid">

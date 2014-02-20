@@ -13,3 +13,10 @@
     margin-top: 36px;
     text-align: right;
 }
+/*
+CSS para ofertalist.jsp
+*/
+.tituOferta {
+    background-color: #5eb95e;
+    color: white;
+}

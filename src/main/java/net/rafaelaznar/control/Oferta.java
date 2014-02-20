@@ -93,7 +93,7 @@ public class Oferta {
     @RequestMapping({"/oferta/getprettycolumns.json"})
     public ModelAndView getPrettyColumns() throws UnsupportedEncodingException, ServletException {
         try {
-            String data = "{\"data\": [\"Id.\", \"Referencia\", \"Fec. Inicio\", \"Fec. Fin\", \"Id. Empresa\"]}";
+            String data = "{\"data\": [\"Id.\", \"Referencia\", \"Categoria\", \"Descripción\", \"Requisitos\"]}";
             return new ModelAndView("messageAjax", "contenido", data);
         } catch (Exception e) {
             throw new ServletException("OfertaGetpagesJson: View Error: " + e.getMessage());

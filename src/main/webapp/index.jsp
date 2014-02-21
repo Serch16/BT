@@ -52,7 +52,7 @@
             <div class="row-fluid">
                 <div class="span12">
                     <hr>
-                    <footer><p>&copy; Rafael Aznar (Febrero de 2014) Angular seed app: v<span app-version></span></p></footer>
+                    <footer><p>&copy; Sergio Martín (Febrero de 2014) Angular seed app: v<span app-version></span></p></footer>
                 </div>            
             </div>
         </div>
@@ -65,7 +65,7 @@
         <script src="js/app.js"></script>
         <script src="js/services.js"></script>
 
-        <script src="js/clienteControllers.js"></script>
+        <script src="js/provinciaControllers.js"></script>
         <script src="js/productoControllers.js"></script>
         <script src="js/tipoproductoControllers.js"></script>
         <script src="js/ofertaControllers.js"></script>

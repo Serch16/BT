@@ -2,12 +2,12 @@
 
 /* Controllers */
 
-var moduloCliente = angular.module('myApp.clienteControllers', []);
+var moduloProvincia = angular.module('myApp.provinciaControllers', []);
 
 
 
-moduloCliente.controller('controlClienteList', function($scope, $routeParams, serverService) {
-    $scope.clase = "cliente";
+moduloProvincia.controller('controlProvinciaList', function($scope, $routeParams, serverService) {
+    $scope.clase = "provincia";
     $scope.accion = "list";
 
 
@@ -19,7 +19,7 @@ moduloCliente.controller('controlClienteList', function($scope, $routeParams, se
         $scope.pages = datos5['data'];
         if (parseInt($scope.numPagina) > parseInt($scope.pages))
             $scope.numPagina = $scope.pages;
-        //$location.path( "#/clientes/" +$scope.pages + "/" + $scope.pages);
+        //$location.path( "#/provincias/" +$scope.pages + "/" + $scope.pages);
     });
 
     $scope.$watch('pages', function() {
@@ -36,8 +36,8 @@ moduloCliente.controller('controlClienteList', function($scope, $routeParams, se
         $scope.prettyFieldNames = datos4['data'];
     });
 
-    $scope.clientes = serverService.getPage($scope.clase, $scope.numPagina, null, null, $scope.nrpp, null, null, null, null, null, null).then(function(datos3) {
-        $scope.clientes = datos3['list'];
+    $scope.provincias = serverService.getPage($scope.clase, $scope.numPagina, null, null, $scope.nrpp, null, null, null, null, null, null).then(function(datos3) {
+        $scope.provincias = datos3['list'];
 
     });
 
@@ -53,8 +53,8 @@ moduloCliente.controller('controlClienteList', function($scope, $routeParams, se
 
     $scope.$on('myApp.construirPagina', function() {
 
-        $scope.clientes = serverService.getPage($scope.clase, $scope.numPagina, null, null, $scope.nrpp, null, null, null, null, null, null).then(function(datos3) {
-            $scope.clientes = datos3['list'];
+        $scope.provincias = serverService.getPage($scope.clase, $scope.numPagina, null, null, $scope.nrpp, null, null, null, null, null, null).then(function(datos3) {
+            $scope.provincias = datos3['list'];
 
         });
 
@@ -63,75 +63,75 @@ moduloCliente.controller('controlClienteList', function($scope, $routeParams, se
 
 });
 
-moduloCliente.controller('controlClienteView', function($scope, $routeParams, serverService) {
-    $scope.back = function() {
-        window.history.back();
-    };
-    $scope.id = $routeParams.id;
-    $scope.objeto = serverService.get('cliente', $scope.id).then(function(datos4) {
-        $scope.objeto = datos4;
-    });
-});
+//moduloProvincia.controller('controlProvinciaView', function($scope, $routeParams, serverService) {
+//    $scope.back = function() {
+//        window.history.back();
+//    };
+//    $scope.id = $routeParams.id;
+//    $scope.objeto = serverService.get('provincia', $scope.id).then(function(datos4) {
+//        $scope.objeto = datos4;
+//    });
+//});
 
 
-moduloCliente.controller('controlClienteRemove', function($scope, $routeParams, serverService) {
-    $scope.result = "";
-    $scope.back = function() {
-        window.history.back();
-    };
-    $scope.id = $routeParams.id;
-    $scope.objeto = serverService.get('cliente', $scope.id).then(function(datos4) {
-        $scope.objeto = datos4;
-    });
-
-    $scope.remove = function() {
-        $scope.result = serverService.remove('cliente', $scope.id).then(function(datos5) {
-            $scope.result = datos5;
-        });
-    };
-});
-
-
-
-
-moduloCliente.controller('controlClienteEdit', function($scope, $routeParams, serverService) {
-    $scope.back = function() {
-        window.history.back();
-    };
-    $scope.id = $routeParams.id;
-    $scope.objeto = serverService.get('cliente', $scope.id).then(function(datos4) {
-        $scope.objeto = datos4;
-    });
-
-    $scope.save = function() {
-        $scope.result = serverService.save('cliente', $scope.objeto).then(function(datos5) {
-            $scope.result = datos5;
-        });
-    };
-
-
-});
+//moduloProvincia.controller('controlProvinciaRemove', function($scope, $routeParams, serverService) {
+//    $scope.result = "";
+//    $scope.back = function() {
+//        window.history.back();
+//    };
+//    $scope.id = $routeParams.id;
+//    $scope.objeto = serverService.get('provincia', $scope.id).then(function(datos4) {
+//        $scope.objeto = datos4;
+//    });
+//
+//    $scope.remove = function() {
+//        $scope.result = serverService.remove('provincia', $scope.id).then(function(datos5) {
+//            $scope.result = datos5;
+//        });
+//    };
+//});
 
 
 
+
+//moduloProvincia.controller('controlProvinciaEdit', function($scope, $routeParams, serverService) {
+//    $scope.back = function() {
+//        window.history.back();
+//    };
+//    $scope.id = $routeParams.id;
+//    $scope.objeto = serverService.get('provincia', $scope.id).then(function(datos4) {
+//        $scope.objeto = datos4;
+//    });
+//
+//    $scope.save = function() {
+//        $scope.result = serverService.save('provincia', $scope.objeto).then(function(datos5) {
+//            $scope.result = datos5;
+//        });
+//    };
+//
+//
+//});
 
 
 
 
 
 
-moduloCliente.controller('MyCtrl2', function($scope) {
+
+
+
+moduloProvincia.controller('MyCtrl2', function($scope) {
     $scope.flores = [{nombre: 'margarita'}, {nombre: 'jazmin'}];
 });
 
 
 
 
-moduloCliente.controller('controlClienteCompra', function($scope, $routeParams, serverService) {
+moduloProvincia.controller('controlProvinciaCompra', function($scope, $routeParams, serverService) {
     $scope.clase = "compra";
     $scope.accion = "compra";
 
-    $scope.id_cliente = $routeParams.id;
+    $scope.id_provincia = $routeParams.id;
     $scope.numPagina = $routeParams.numpage;
     $scope.nrpp = $routeParams.numrpp;
     $scope.botoneraNrpp = serverService.getNrppBar($scope.clase, $scope.accion, $scope.numPagina, $scope.nrpp);
@@ -140,7 +140,7 @@ moduloCliente.controller('controlClienteCompra', function($scope, $routeParams, 
         $scope.pages = datos5['data'];
         if (parseInt($scope.numPagina) > parseInt($scope.pages))
             $scope.numPagina = $scope.pages;
-        //$location.path( "#/clientes/" +$scope.pages + "/" + $scope.pages);
+        //$location.path( "#/provincias/" +$scope.pages + "/" + $scope.pages);
     });
 
     $scope.$watch('pages', function() {
@@ -173,8 +173,8 @@ moduloCliente.controller('controlClienteCompra', function($scope, $routeParams, 
 
     $scope.$on('myApp.construirPagina', function() {
 
-        $scope.clientes = serverService.getPage($scope.clase, $scope.numPagina, null, null, $scope.nrpp, null, null, null, null, null, null).then(function(datos3) {
-            $scope.clientes = datos3['list'];
+        $scope.provincias = serverService.getPage($scope.clase, $scope.numPagina, null, null, $scope.nrpp, null, null, null, null, null, null).then(function(datos3) {
+            $scope.provincias = datos3['list'];
 
         });
 

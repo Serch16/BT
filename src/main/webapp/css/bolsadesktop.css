@@ -20,3 +20,33 @@ CSS para ofertalist.jsp
     background-color: #5eb95e;
     color: white;
 }
+.tituOferta, .variosOferta, .descripOferta, .pieOferta {
+    padding-left: 10px;
+}
+.variosOferta, .descripOferta, .pieOferta {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.caja {
+    border: 1px solid green;
+    margin-bottom: 20px;
+}
+.variosOferta {
+    background-color: #a9dba9;
+}
+.pieOferta {
+    background-color: #dff0d8;
+}
+
+
+/*
+Común a todo la página
+*/
+.row {
+    margin-left: 0px;
+}
+.back {
+    background-color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+}

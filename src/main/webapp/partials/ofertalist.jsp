@@ -33,17 +33,10 @@
                 <input type="text" class="input-small" placeholder="Palabra clave">
                 <select>
                     <option>Provincia</option>
-                    <option></option>
-                    <option></option>
-                    <option></option>
-                    <option></option>
+                    <option ng-repeat="pro in provincias">{{pro.nombrepro}}</option>
                 </select>
                 <select>
                     <option>Categoria</option>
-                    <option></option>
-                    <option></option>
-                    <option></option>
-                    <option></option>
                 </select>
                 <button type="submit" class="btn">Buscar ofertas</button>
             </form>

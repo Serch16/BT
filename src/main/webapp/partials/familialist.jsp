@@ -23,7 +23,7 @@
         <div class="span12">
             <ul class="breadcrumb">
                 Estás en:
-                <li><a href="#oferta/list/1/10">Ofertas de trabajo</a></li>
+                <li><a href="#familia/list/1/10">Familias</a></li>
             </ul>
         </div>
     </div>
@@ -33,11 +33,9 @@
                 <input type="text" class="input-small" placeholder="Palabra clave">
                 <select>
                     <option>Provincia</option>
-                    <option ng-repeat="pro in provincias">{{pro.nombrepro}}</option>
                 </select>
                 <select>
                     <option>Categoria</option>
-                    <option ng-repeat="fam in familias">{{fam.nombrefam}}</option>
                 </select>
                 <button type="submit" class="btn">Buscar ofertas</button>
             </form>
@@ -84,31 +82,13 @@
             </div> 
         </div>
         <div class="span7">
-            <div class="row caja" ng-repeat="ofe in ofertas">
-                <div class="row tituOferta">
-                    <div class="span12"><h3>{{ofe.puesto}}</h3></div>
-                </div>
+            <div class="row caja" ng-repeat="fam in familias">
                 <div class="row variosOferta">
-                    <div class="span3"><b>{{ofe.categoria}}</b></div>
-                    <div class="span3">Ref.: {{ofe.referencia}}</div>
-                    <div class="span4">{{ofe.fechaini}}</div>
-                    <div class="span2">
-                        <div class="btn-group">
-                            <a class="btn btn-mini action02" href="#/oferta/view/{{ofe.id}}"><i class="icon-zoom-in"></i></a>
-                            <a class="btn btn-mini action03" href="#/oferta/edit/{{ofe.id}}"><i class="icon-pencil"></i></a>
-                            <a class="btn btn-mini action04" href="#/oferta/remove/{{ofe.id}}"><i class="icon-remove"></i></a>
-                        </div> 
-                    </div>
+                    <div class="span3">Identificador: <b>{{fam.id}}</b></div>
+                    <div class="span3">Familia: {{fam.nombrefam}}</div>
+                    <div class="span2"></div>
+                    <div class="span4">Cód. Familia: {{fam.codfamilia}}</div>
                 </div>
-                <div class="row descripOferta">
-                    <div class="span12">{{ofe.descripcion}}</div>
-                </div>
-                <div class="row pieOferta">
-                    <div class="span4">Vacantes: {{ofe.vacantes}}</div>
-                    <div class="span4">{{ofe.id_contrato}}</div>
-                    <div class="span4"><b>{{ofe.salario}} euros</b></div>
-                </div>
-
             </div>
         </div>
         <div class="span1">

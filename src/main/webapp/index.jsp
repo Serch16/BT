@@ -69,6 +69,7 @@
         <script src="js/productoControllers.js"></script>
         <script src="js/tipoproductoControllers.js"></script>
         <script src="js/ofertaControllers.js"></script>
+        <script src="js/familiaControllers.js"></script>
 
         <script src="js/filters.js"></script>
         <script src="js/directives.js"></script>

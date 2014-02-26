@@ -2,12 +2,12 @@
 
 /* Controllers */
 
-var moduloOferta = angular.module('myApp.ofertaControllers', []);
+var moduloFamilia = angular.module('myApp.familiaControllers', []);
 
 
 
-moduloOferta.controller('controlOfertaList', function($scope, $routeParams, serverService) {
-    $scope.clase = "oferta";
+moduloFamilia.controller('controlFamiliaList', function($scope, $routeParams, serverService) {
+    $scope.clase = "familia";
     $scope.accion = "list";
 
 
@@ -19,7 +19,7 @@ moduloOferta.controller('controlOfertaList', function($scope, $routeParams, serv
         $scope.pages = datos5['data'];
         if (parseInt($scope.numPagina) > parseInt($scope.pages))
             $scope.numPagina = $scope.pages;
-        //$location.path( "#/ofertas/" +$scope.pages + "/" + $scope.pages);
+        //$location.path( "#/familias/" +$scope.pages + "/" + $scope.pages);
     });
 
     $scope.$watch('pages', function() {
@@ -36,12 +36,12 @@ moduloOferta.controller('controlOfertaList', function($scope, $routeParams, serv
         $scope.prettyFieldNames = datos4['data'];
     });
 
-    $scope.numOfertas = serverService.getRegisters($scope.clase).then(function(datos4) {
-        $scope.numOfertas = datos4['data'];
+    $scope.numFamilias = serverService.getRegisters($scope.clase).then(function(datos4) {
+        $scope.numFamilias = datos4['data'];
     });
 
-    $scope.ofertas = serverService.getPage($scope.clase, $scope.numPagina, null, null, $scope.nrpp, null, null, null, null, null, null).then(function(datos3) {
-        $scope.ofertas = datos3['list'];
+    $scope.familias = serverService.getPage($scope.clase, $scope.numPagina, null, null, $scope.nrpp, null, null, null, null, null, null).then(function(datos3) {
+        $scope.familias = datos3['list'];
 
     });
 
@@ -57,53 +57,37 @@ moduloOferta.controller('controlOfertaList', function($scope, $routeParams, serv
 
     $scope.$on('myApp.construirPagina', function() {
 
-        $scope.ofertas = serverService.getPage($scope.clase, $scope.numPagina, null, null, $scope.nrpp, null, null, null, null, null, null).then(function(datos3) {
-            $scope.ofertas = datos3['list'];
+        $scope.familias = serverService.getPage($scope.clase, $scope.numPagina, null, null, $scope.nrpp, null, null, null, null, null, null).then(function(datos3) {
+            $scope.familias = datos3['list'];
 
         });
 
     })
-
-    $scope.provincias = serverService.getPage("provincia", $scope.numPagina, null, null, 52, null, null, null, null, null, null).then(function(datos3) {
-        $scope.provincias = datos3['list'];
-    });
-    
-    $scope.familias = serverService.getPage("familia", $scope.numPagina, null, null, 4, null, null, null, null, null, null).then(function(datos3) {
-        $scope.familias = datos3['list'];
-    });
 });
 
-moduloOferta.controller('controlOfertaView', function($scope, $routeParams, serverService) {
+moduloFamilia.controller('controlFamiliaView', function($scope, $routeParams, serverService) {
     $scope.back = function() {
         window.history.back();
     };
     $scope.id = $routeParams.id;
-    $scope.objeto = serverService.get('oferta', $scope.id).then(function(datos4) {
+    $scope.objeto = serverService.get('familia', $scope.id).then(function(datos4) {
         $scope.objeto = datos4;
-    });
-    
-        $scope.provincias = serverService.getPage("provincia", $scope.numPagina, null, null, 52, null, null, null, null, null, null).then(function(datos3) {
-        $scope.provincias = datos3['list'];
-    });
-    
-    $scope.familias = serverService.getPage("familia", $scope.numPagina, null, null, 4, null, null, null, null, null, null).then(function(datos3) {
-        $scope.familias = datos3['list'];
     });
 });
 
 
-moduloOferta.controller('controlOfertaRemove', function($scope, $routeParams, serverService) {
+moduloFamilia.controller('controlFamiliaRemove', function($scope, $routeParams, serverService) {
     $scope.result = "";
     $scope.back = function() {
         window.history.back();
     };
     $scope.id = $routeParams.id;
-    $scope.objeto = serverService.get('oferta', $scope.id).then(function(datos4) {
+    $scope.objeto = serverService.get('familia', $scope.id).then(function(datos4) {
         $scope.objeto = datos4;
     });
 
     $scope.remove = function() {
-        $scope.result = serverService.remove('oferta', $scope.id).then(function(datos5) {
+        $scope.result = serverService.remove('familia', $scope.id).then(function(datos5) {
             $scope.result = datos5;
         });
     };
@@ -112,17 +96,17 @@ moduloOferta.controller('controlOfertaRemove', function($scope, $routeParams, se
 
 
 
-moduloOferta.controller('controlOfertaEdit', function($scope, $routeParams, serverService) {
+moduloFamilia.controller('controlFamiliaEdit', function($scope, $routeParams, serverService) {
     $scope.back = function() {
         window.history.back();
     };
     $scope.id = $routeParams.id;
-    $scope.objeto = serverService.get('oferta', $scope.id).then(function(datos4) {
+    $scope.objeto = serverService.get('familia', $scope.id).then(function(datos4) {
         $scope.objeto = datos4;
     });
 
     $scope.save = function() {
-        $scope.result = serverService.save('oferta', $scope.objeto).then(function(datos5) {
+        $scope.result = serverService.save('familia', $scope.objeto).then(function(datos5) {
             $scope.result = datos5;
         });
     };
@@ -138,18 +122,18 @@ moduloOferta.controller('controlOfertaEdit', function($scope, $routeParams, serv
 
 
 
-moduloOferta.controller('MyCtrl2', function($scope) {
+moduloFamilia.controller('MyCtrl2', function($scope) {
     $scope.flores = [{nombre: 'margarita'}, {nombre: 'jazmin'}];
 });
 
 
 
 
-moduloOferta.controller('controlOfertaCompra', function($scope, $routeParams, serverService) {
+moduloFamilia.controller('controlFamiliaCompra', function($scope, $routeParams, serverService) {
     $scope.clase = "compra";
     $scope.accion = "compra";
 
-    $scope.id_oferta = $routeParams.id;
+    $scope.id_familia = $routeParams.id;
     $scope.numPagina = $routeParams.numpage;
     $scope.nrpp = $routeParams.numrpp;
     $scope.botoneraNrpp = serverService.getNrppBar($scope.clase, $scope.accion, $scope.numPagina, $scope.nrpp);
@@ -158,7 +142,7 @@ moduloOferta.controller('controlOfertaCompra', function($scope, $routeParams, se
         $scope.pages = datos5['data'];
         if (parseInt($scope.numPagina) > parseInt($scope.pages))
             $scope.numPagina = $scope.pages;
-        //$location.path( "#/ofertas/" +$scope.pages + "/" + $scope.pages);
+        //$location.path( "#/familias/" +$scope.pages + "/" + $scope.pages);
     });
 
     $scope.$watch('pages', function() {
@@ -191,8 +175,8 @@ moduloOferta.controller('controlOfertaCompra', function($scope, $routeParams, se
 
     $scope.$on('myApp.construirPagina', function() {
 
-        $scope.ofertas = serverService.getPage($scope.clase, $scope.numPagina, null, null, $scope.nrpp, null, null, null, null, null, null).then(function(datos3) {
-            $scope.ofertas = datos3['list'];
+        $scope.familias = serverService.getPage($scope.clase, $scope.numPagina, null, null, $scope.nrpp, null, null, null, null, null, null).then(function(datos3) {
+            $scope.familias = datos3['list'];
 
         });
 

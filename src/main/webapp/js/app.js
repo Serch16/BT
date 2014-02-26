@@ -14,6 +14,7 @@ angular.module('myApp', [
     'myApp.productoControllers',
     'myApp.tipoproductoControllers',
     'myApp.ofertaControllers',
+    'myApp.familiaControllers',
     'ngSanitize' //http://stackoverflow.com/questions/9381926/insert-html-into-view-using-angularjs
 ])
         .config(['$routeProvider', function($routeProvider) {
@@ -30,7 +31,9 @@ angular.module('myApp', [
                 $routeProvider.when('/oferta/view/:id', {templateUrl: 'partials/ofertaview.jsp', controller: 'controlOfertaView'});
                 $routeProvider.when('/oferta/remove/:id', {templateUrl: 'partials/ofertaremove.jsp', controller: 'controlOfertaRemove'});
 
+                // Tablas sin mantenimiento, sólo listados
                 $routeProvider.when('/provincia/list/:numpage/:numrpp', {templateUrl: 'partials/provincialist.jsp', controller: 'controlProvinciaList'});
+                $routeProvider.when('/familia/list/:numpage/:numrpp', {templateUrl: 'partials/familialist.jsp', controller: 'controlFamiliaList'});
 
                 $routeProvider.when('/producto/list/:numpage/:numrpp', {templateUrl: 'partials/productolist.jsp', controller: 'controlProductoList'});
                 $routeProvider.when('/producto/view/:id', {templateUrl: 'partials/productoview.jsp', controller: 'controlProductoView'});

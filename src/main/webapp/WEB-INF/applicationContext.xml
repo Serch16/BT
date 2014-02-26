@@ -20,6 +20,7 @@
         <bean class="net.rafaelaznar.dao.ProductoDao" />
         <bean class="net.rafaelaznar.dao.TipoproductoDao" />
         <bean class="net.rafaelaznar.dao.OfertaDao" />
+        <bean class="net.rafaelaznar.dao.FamiliaDao" />
     
     
     <!--bean id="propertyConfigurer"

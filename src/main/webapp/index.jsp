@@ -32,30 +32,41 @@
 
         <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
         <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
-
+        <script>
+            function Ctrl($scope) {
+                $scope.text = 'email@ejemplo.com';
+            }
+        </script>
 
     </head>    
 
     <body>
-
-        
-
         <div class="container-fluid">
             <div class="row-fluid">
+                <div class="row">
+                    <div class="muted span4"><img id="logoinstituto" src="img/logo.png"></div>
+                    <div class="span4 cabeinfo"></div>
+                    <div class="span4 cabeinfo">
+                        <form name="myForm" ng-controller="Ctrl">
+                            Email: <input type="email" name="input" ng-model="text" required>
+                            <span class="error" ng-show="myForm.input.$error.required"></span>
+                            <span class="error" ng-show="myForm.input.$error.email"></span>
+                        </form>
+                    </div>
+                </div>
             </div>
             <div class="row-fluid">
                 <div class="span12">
                     <div ng-view></div>
                 </div>
             </div>
-
             <div class="row-fluid">
                 <div class="span12">
                     <hr>
                     <footer><p>&copy; Sergio Martín (Febrero de 2014) Angular seed app: v<span app-version></span></p></footer>
                 </div>            
             </div>
-        </div>
+        </div> <!-- Fin container-fluid -->
         <!-- In production use:
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
         -->
@@ -70,6 +81,7 @@
         <script src="js/tipoproductoControllers.js"></script>
         <script src="js/ofertaControllers.js"></script>
         <script src="js/familiaControllers.js"></script>
+        <script src="js/alumnoControllers.js"></script>
 
         <script src="js/filters.js"></script>
         <script src="js/directives.js"></script>

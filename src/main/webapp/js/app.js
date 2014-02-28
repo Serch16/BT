@@ -13,6 +13,7 @@ angular.module('myApp', [
     'myApp.provinciaControllers',
     'myApp.productoControllers',
     'myApp.tipoproductoControllers',
+    'myApp.alumnoControllers',
     'myApp.ofertaControllers',
     'myApp.familiaControllers',
     'ngSanitize' //http://stackoverflow.com/questions/9381926/insert-html-into-view-using-angularjs
@@ -31,18 +32,21 @@ angular.module('myApp', [
                 $routeProvider.when('/oferta/view/:id', {templateUrl: 'partials/ofertaview.jsp', controller: 'controlOfertaView'});
                 $routeProvider.when('/oferta/remove/:id', {templateUrl: 'partials/ofertaremove.jsp', controller: 'controlOfertaRemove'});
 
+                $routeProvider.when('/alumno/list/:numpage/:numrpp', {templateUrl: 'partials/alumnolist.jsp', controller: 'controlAlumnoList'});
+                $routeProvider.when('/alumno/edit/:id', {templateUrl: 'partials/alumnoedit.jsp', controller: 'controlAlumnoEdit'});
+                $routeProvider.when('/alumno/view/:id', {templateUrl: 'partials/alumnoview.jsp', controller: 'controlAlumnoView'});
+                $routeProvider.when('/alumno/remove/:id', {templateUrl: 'partials/alumnoremove.jsp', controller: 'controlAlumnoRemove'});
+                
                 // Tablas sin mantenimiento, sólo listados
                 $routeProvider.when('/provincia/list/:numpage/:numrpp', {templateUrl: 'partials/provincialist.jsp', controller: 'controlProvinciaList'});
                 $routeProvider.when('/familia/list/:numpage/:numrpp', {templateUrl: 'partials/familialist.jsp', controller: 'controlFamiliaList'});
 
-                $routeProvider.when('/producto/list/:numpage/:numrpp', {templateUrl: 'partials/productolist.jsp', controller: 'controlProductoList'});
-                $routeProvider.when('/producto/view/:id', {templateUrl: 'partials/productoview.jsp', controller: 'controlProductoView'});
-                $routeProvider.when('/producto/edit/:id', {templateUrl: 'partials/productoedit.jsp', controller: 'controlProductoEdit'});
+                $routeProvider.when('/inicio', {templateUrl: 'partials/inicio.jsp', controller: 'controlProductoList'});
 
                 $routeProvider.when('/tipoproducto/list/:numpage/:numrpp', {templateUrl: 'partials/tipoproductolist.jsp', controller: 'controlTipoproductoList'});
                 $routeProvider.when('/tipoproducto/view/:id', {templateUrl: 'partials/tipoproductoview.jsp', controller: 'controlTipoproductoView'});
                 $routeProvider.when('/tipoproducto/selection/:numpage/:numrpp', {templateUrl: 'partials/tipoproductoselection.jsp', controller: 'controlTipoproductoSelection'});
 
                 $routeProvider.when('/view2', {templateUrl: 'partials/partial2.jsp', controller: 'MyCtrl2'});
-                $routeProvider.otherwise({redirectTo: '/oferta/list/1/10'});
+                $routeProvider.otherwise({redirectTo: '/inicio'});
             }]);

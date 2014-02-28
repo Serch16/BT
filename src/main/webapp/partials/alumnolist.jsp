@@ -8,9 +8,6 @@
                         <li class="active"><a href="#oferta/list/1/10">Ofertas de trabajo</a></li>
                         <li><a href="#tipoproducto/list/1/10">Empleo público</a></li>
                     </ul>
-                    <ul class="nav pull-right">
-                        <li><a href="#alumno/edit/1">Mi Perfil</a></li>
-                    </ul>
                 </div>
             </div>
         </div><!-- /.navbar -->
